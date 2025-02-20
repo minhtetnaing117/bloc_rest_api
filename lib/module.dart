@@ -1,3 +1,4 @@
+import 'package:bloc_rest_api/bloc/get/cubit/getcontact_cubit.dart';
 import 'package:bloc_rest_api/data/api/apiservice.dart';
 import 'package:bloc_rest_api/data/contact_repository.dart';
 import 'package:get_it/get_it.dart';
@@ -13,4 +14,7 @@ void locator(){
 
   ContactRepository contactRepository = ContactRepository(getIt.call());
   getIt.registerLazySingleton(() => contactRepository);
+
+  GetcontactCubit getcontactCubit = GetcontactCubit(getIt.call());
+  getIt.registerLazySingleton(() => getcontactCubit);
 }
