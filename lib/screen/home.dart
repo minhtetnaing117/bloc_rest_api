@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
       child: ListTile(
         title: Text(contact.name),
         subtitle: Text(contact.job),
-        leading: Text(contact.age),
+        trailing: Text('age ${contact.age}'),
       ),
     );
   }
